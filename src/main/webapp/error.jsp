@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
-    <title>Sistema Pessoal Financeiro</title>
+    <title>TSS Personal Finance</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -43,41 +43,25 @@
             </div>
         </div>
         <!-- Spinner End -->
-
-
-        <!-- Sign In Start -->
-        <div class="container-fluid">
-            <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
-                <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
-                    <form action="<%=request.getContextPath() %>/login" method="post" class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <a href="index.html" class="">
-                                <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>TSS Finance</h3>
-                            </a>
-                            <h3>Sign In</h3>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input id="login" name="login" type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">Login</label>
-                        </div>
-                        <div class="form-floating mb-4">
-                            <input id="password" name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                            <label for="floatingPassword">Senha</label>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Lembre-me</label>
-                            </div>
-                            <a href="">Esqueceu a senha?</a>
-                        </div>
-                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Entrar</button>
-                        <p class="text-center mb-0">N�o tem uma conta? <a href="">Cadastre aqui</a></p>
-                    </form>
+        <!-- Content Start -->
+        <div class="content" style="margin-left: 0; display: contents">
+            <!-- 404 Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row vh-100 bg-secondary rounded align-items-center justify-content-center mx-0">
+                    <div class="col-md-6 text-center p-4">
+                        <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
+                        <h1 class="display-1 fw-bold">Atenção</h1>
+                        <h1 class="mb-4">Erro interno no servidor</h1>
+                        <p class="mb-4"><%=request.getAttribute("msg")%></p>
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="<%=request.getContextPath() %>/">Voltar para página inicial</a>
+                    </div>
                 </div>
             </div>
+            <!-- 404 End -->
+
+
         </div>
-        <!-- Sign In End -->
+        <!-- Content End -->
     </div>
 
     <!-- JavaScript Libraries -->
