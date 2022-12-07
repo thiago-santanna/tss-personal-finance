@@ -10,4 +10,9 @@
     <servlet-name>Login</servlet-name>
     <servlet-class>servlets.Login</servlet-class>
   </servlet>
+  <filter>
+    <display-name>Autenticacao</display-name>
+    <filter-name>Autenticacao</filter-name>
+    <filter-class>filter.Autenticacao</filter-class>
+  </filter>
 </web-app>

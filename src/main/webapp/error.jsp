@@ -35,6 +35,12 @@
 </head>
 
 <body>
+<%
+	String subTitle = (String) request.getAttribute("subTitle");
+	if(subTitle == null || subTitle.equals("null")){
+		subTitle = "Erro interno no servidor.";
+	}
+%>
     <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -51,7 +57,7 @@
                     <div class="col-md-6 text-center p-4">
                         <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
                         <h1 class="display-1 fw-bold">Atenção</h1>
-                        <h1 class="mb-4">Erro interno no servidor</h1>
+                        <h1 class="mb-4"><%= subTitle %></h1>
                         <p class="mb-4"><%=request.getAttribute("msg")%></p>
                         <a class="btn btn-primary rounded-pill py-3 px-5" href="<%=request.getContextPath() %>/">Voltar para página inicial</a>
                     </div>

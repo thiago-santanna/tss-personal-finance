@@ -2,7 +2,6 @@ package servlets;
 
 import java.io.IOException;
 
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -41,14 +40,27 @@ public class Login extends HttpServlet {
 			String login = request.getParameter("login");
 			String password = request.getParameter("password");
 			
-			double c = 1 / 0;
+			if(login.equalsIgnoreCase("admin") && password.equalsIgnoreCase("admin")) {
+				request.getSession().setAttribute("login", login);
+				
+				
+				request.getRequestDispatcher("/dashboard.jsp").forward(request, response);
+			}else {
+				customDispatcherWithMessage(request, response, "Login falhou", "Os dados informados estão incorretos");
+			}
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-			request.setAttribute("msg",	e.getMessage());
-			request.getRequestDispatcher("/error.jsp").forward(request, response);
+			customDispatcherWithMessage(request, response, "Erro interno no servidor", e.getMessage());
 			
 		}
+	}
+
+	private void customDispatcherWithMessage(HttpServletRequest request, HttpServletResponse response, String subTitle, String message)
+			throws ServletException, IOException {
+		request.setAttribute("msg",	message);
+		request.setAttribute("subTitle", subTitle);
+		request.getRequestDispatcher("/error.jsp").forward(request, response);
 	}
 
 }
