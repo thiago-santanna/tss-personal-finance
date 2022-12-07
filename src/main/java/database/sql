@@ -13,3 +13,8 @@ create table tb_user(
 INSERT INTO tb_user(
 	id_user_owner, name_complete, login, email, password)
 	VALUES (0, 'TSS Aplicativos Web', 'tss-admin', 'tss.webapps@gmail.com', 'S3gur0');
+	
+ALTER TABLE `tsspersonalfinance`.`tb_user` 
+ADD UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
+ADD UNIQUE INDEX `login_UNIQUE` (`login` ASC) VISIBLE;
+;
