@@ -2,21 +2,25 @@ package servlets;
 
 import java.io.IOException;
 
+import dao.LoginRepository;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import model.User;
 
 /**
  * Servlet implementation class Login
  */
 @WebServlet(name = "login", value = "/login")
-public class Login extends HttpServlet {
+public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	public Login() {
+	private LoginRepository loginRepository = new LoginRepository();
+	
+	public LoginController() {
 	}
 
 	@Override
@@ -39,7 +43,10 @@ public class Login extends HttpServlet {
 			String password = request.getParameter("password");
 			
 			if (login != null && !login.isEmpty() && password != null && !password.isEmpty()) {
-				if(login.equalsIgnoreCase("admin") && password.equalsIgnoreCase("admin")) {
+				
+				User modelLogin = User.getLoginDataLogin(login, password);
+				
+				if(loginRepository.validarLogin(modelLogin)) {
 					request.getSession().setAttribute("login", login);
 					
 					

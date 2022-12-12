@@ -258,7 +258,7 @@
 	<jsp:include page="javascript.jsp"></jsp:include>
 
     <!-- Template Javascript -->
-    <script src="assets/js/main.js"></script>
+    <!-- <script src="assets/js/main.js"></script> -->
 </body>
 
 </html>    

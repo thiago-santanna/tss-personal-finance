@@ -70,7 +70,12 @@ public class Autenticacao extends HttpFilter implements Filter {
 	}
 
 	private boolean precisaAutenticarUrl(String url) {
-		return !(url.contains("assets") || url.equalsIgnoreCase("/index.jsp") || url.equalsIgnoreCase("/login"));
+		return !(
+				url.contains("assets") || 
+				url.equalsIgnoreCase("/index.jsp") || 
+				url.equalsIgnoreCase("/login") ||
+				url.equalsIgnoreCase("/signup.jsp")
+				);
 	}
 
 }
