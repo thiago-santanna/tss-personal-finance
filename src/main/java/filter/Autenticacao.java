@@ -66,7 +66,6 @@ public class Autenticacao extends HttpFilter implements Filter {
 	@Override
 	public void init(FilterConfig fConfig) throws ServletException {
 		connection = SingletonConnectionDB.getConnection();
-		System.out.println(connection);
 	}
 
 	private boolean precisaAutenticarUrl(String url) {
@@ -74,7 +73,8 @@ public class Autenticacao extends HttpFilter implements Filter {
 				url.contains("assets") || 
 				url.equalsIgnoreCase("/index.jsp") || 
 				url.equalsIgnoreCase("/login") ||
-				url.equalsIgnoreCase("/signup.jsp")
+				url.equalsIgnoreCase("/signup.jsp") ||
+				url.equalsIgnoreCase("/signup")
 				);
 	}
 

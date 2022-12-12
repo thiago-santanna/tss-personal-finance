@@ -26,7 +26,7 @@
                             <a href="index.html" class="">
                                 <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>TSS Finance</h3>
                             </a>
-                            <h3>Sign In</h3>
+<!--                             <h3>Sign In</h3> -->
                         </div>
                         <div class="form-floating mb-3">
                             <input id="login" name="login" type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-floating mb-4">
                             <input id="password" name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                            <label for="floatingPassword">senha</label>
+                            <label for="floatingPassword">Senha</label>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="form-check">
@@ -46,6 +46,7 @@
                         <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Entrar</button>
                         <p class="text-center mb-0">Não tem uma conta? <a href="<%= request.getContextPath()%>/signup.jsp">Cadastre aqui</a></p>
                     </form>
+                    <h5 class="msg">${msg}</h5>
                 </div>
             </div>
         </div>

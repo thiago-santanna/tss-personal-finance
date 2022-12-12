@@ -8,6 +8,17 @@ public class User {
 	private String password;
 	private boolean status;
 	
+	public boolean isNovo() {
+
+		if (this.id == null) {
+			return true; /* Inserir novo */
+		} else if (this.id != null && this.id > 0) {
+			return false; /* Atualizar */
+		}
+
+		return id == null;
+	}
+	
 	public static User getLoginDataLogin(String login, String password) {
 		User modelLogin = new User();
 		modelLogin.setLogin(login);
@@ -16,6 +27,12 @@ public class User {
 	}
 	
 	public User() {
+	}
+	
+	public User(String login, String email, String password) {
+		this.login = login;
+		this.email = email;
+		this.password = password;		
 	}
 
 	public User(Long id, Long idUserOwner, String login, String email, String password,
