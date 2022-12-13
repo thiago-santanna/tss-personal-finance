@@ -4,24 +4,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<jsp:include page="head.jsp"></jsp:include>
+<jsp:include page="components/head.jsp"></jsp:include>
 
 <body>
     <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
-		<jsp:include page="spinner.jsp"></jsp:include>
+		<jsp:include page="components/spinner.jsp"></jsp:include>
         <!-- Spinner End -->
 
 
         <!-- Sidebar Start -->
-		<jsp:include page="sidebar.jsp"></jsp:include>
+		<jsp:include page="components/sidebar.jsp"></jsp:include>
         <!-- Sidebar End -->
 
 
         <!-- Content Start -->
         <div class="content">
             <!-- Navbar Start -->
-            <jsp:include page="navbar.jsp"></jsp:include>
+            <jsp:include page="components/navbar.jsp"></jsp:include>
             <!-- Navbar End -->
 
 
@@ -244,7 +244,7 @@
 
 
             <!-- Footer Start -->
-			<jsp:include page="footer.jsp"></jsp:include>
+			<jsp:include page="components/footer.jsp"></jsp:include>
             <!-- Footer End -->
         </div>
         <!-- Content End -->
@@ -255,10 +255,7 @@
     </div>
 
     <!-- JavaScript Libraries -->
-	<jsp:include page="javascript.jsp"></jsp:include>
-
-    <!-- Template Javascript -->
-    <!-- <script src="assets/js/main.js"></script> -->
+	<jsp:include page="components/javascript.jsp"></jsp:include>
 </body>
 
 </html>    

@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
-<jsp:include page="head.jsp"></jsp:include>
+<jsp:include page="components/head.jsp"></jsp:include>
 
 <body>
     <div class="container-fluid position-relative d-flex p-0">
@@ -44,9 +44,17 @@
                             <a href="">Esqueceu a senha?</a>
                         </div>
                         <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Entrar</button>
-                        <p class="text-center mb-0">Não tem uma conta? <a href="<%= request.getContextPath()%>/signup.jsp">Cadastre aqui</a></p>
+                        <p class="text-center mb-0">NÃ£o tem uma conta? <a href="<%= request.getContextPath()%>/signup.jsp">Cadastre aqui</a></p>
                     </form>
-                    <h5 class="msg">${msg}</h5>
+                    <%
+                    	if(request.getAttribute("msg") != null){ %>
+                            <div class="alert alert-primary" role="alert">
+      					 		${msg}
+      						</div>
+      				<%
+                    	}
+                    %>
+
                 </div>
             </div>
         </div>
@@ -54,7 +62,7 @@
     </div>
 
     <!-- JavaScript Libraries -->
-	<jsp:include page="javascript.jsp"></jsp:include>
+	<jsp:include page="components/javascript.jsp"></jsp:include>
 </body>
 
 </html>

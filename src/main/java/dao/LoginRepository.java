@@ -18,12 +18,12 @@ public class LoginRepository {
 	
 	public boolean validarLogin(User login) throws SQLException {
 		String sql = "SELECT * FROM tb_user where lower(login) = lower(?) and lower(password) = lower(?);";
-		ResultSet resultSet = null;
 		try(PreparedStatement preparedStatement = this.connection.prepareStatement(sql)){
+			ResultSet resultSet;
 			preparedStatement.setString(1, login.getLogin());
 			preparedStatement.setString(2, login.getPassword());			
 			resultSet = preparedStatement.executeQuery();			
+			return resultSet.next();
 		}
-		return resultSet.next();
 	}
 }

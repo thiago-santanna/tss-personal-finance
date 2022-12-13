@@ -3,7 +3,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <jsp:include page="head.jsp"></jsp:include>
+  <jsp:include page="components/head.jsp"></jsp:include>
 
   <body>
     <div class="container-fluid position-relative d-flex p-0">
@@ -88,6 +88,6 @@
     </div>
 
     <!-- JavaScript Libraries -->
-	<jsp:include page="javascript.jsp"></jsp:include>
+	<jsp:include page="components/javascript.jsp"></jsp:include>
   </body>
 </html>

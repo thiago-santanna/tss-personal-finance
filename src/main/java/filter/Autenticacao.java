@@ -74,7 +74,8 @@ public class Autenticacao extends HttpFilter implements Filter {
 				url.equalsIgnoreCase("/index.jsp") || 
 				url.equalsIgnoreCase("/login") ||
 				url.equalsIgnoreCase("/signup.jsp") ||
-				url.equalsIgnoreCase("/signup")
+				url.equalsIgnoreCase("/signup") ||
+				url.equalsIgnoreCase("/perfil.jsp")
 				);
 	}
 

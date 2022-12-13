@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
@@ -21,11 +22,13 @@ public class UserRepository implements RepositoryCrud<User> {
 		if(object.isNovo()) {
 			String sql = "INSERT INTO tsspersonalfinance.tb_user (login, email, password) VALUES (?,?,?);";	
 			
+
 			try(PreparedStatement prepareStatement = this.connection.prepareStatement(sql)){
 				prepareStatement.setString(1, object.getLogin());
 				prepareStatement.setString(2, object.getEmail());
 				prepareStatement.setString(3, object.getPassword());
-				prepareStatement.execute();				
+				prepareStatement.executeUpdate();	
+				this.connection.commit();
 			}
 			
 			return Optional.ofNullable(object);
