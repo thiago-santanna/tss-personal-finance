@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>     
-
-<%@page import="model.User"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     
 <!DOCTYPE html>
 <html>
@@ -87,9 +85,9 @@
 <script type="text/javascript">
 function visualizarImg(fotoembase64, filefoto) {   
     
-    var preview = document.getElementById(fotoembase64); // campo IMG html
-    var fileUser = document.getElementById(filefoto).files[0];
-    var reader = new FileReader();
+    let preview = document.getElementById(fotoembase64); // campo IMG html
+    let fileUser = document.getElementById(filefoto).files[0];
+    let reader = new FileReader();
     
     reader.onloadend = function (){
 	    preview.src = reader.result; /*Carrega a foto na tela*/
