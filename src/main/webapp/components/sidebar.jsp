@@ -17,13 +17,13 @@
              </div>
          </div>
          <div class="navbar-nav w-100">
-             <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-             <a href="#" class="nav-item nav-link"><i class="fas fa-wallet me-2"></i>Contas</a>
-             <a href="#" class="nav-item nav-link"><i class="fas fa-file-alt me-2"></i>Categorias</a>
-             <a href="#" class="nav-item nav-link"><i class="fas fa-hand-holding-usd me-2"></i>Receitas</a>
-             <a href="#" class="nav-item nav-link"><i class="fas fa-credit-card me-2"></i>Despesas</a>
-             <a href="#" class="nav-item nav-link"><i class="fas fa-comment-dollar me-2"></i>Lançamentos</a>
-             <a href="#" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Relatórios</a>
+             <a href="<%= request.getContextPath() %>/dashboard.jsp" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+             <a href="<%= request.getContextPath() %>/contas.jsp" class="nav-item nav-link"><i class="fas fa-wallet me-2"></i>Contas</a>
+             <a href="<%= request.getContextPath() %>/categorias.jsp" class="nav-item nav-link"><i class="fas fa-file-alt me-2"></i>Categorias</a>
+             <a href="<%= request.getContextPath() %>/receitas.jsp" class="nav-item nav-link"><i class="fas fa-hand-holding-usd me-2"></i>Receitas</a>
+             <a href="<%= request.getContextPath() %>/despesas.jsp" class="nav-item nav-link"><i class="fas fa-credit-card me-2"></i>Despesas</a>
+             <a href="<%= request.getContextPath() %>/lancamentos.jsp" class="nav-item nav-link"><i class="fas fa-comment-dollar me-2"></i>Lançamentos</a>
+             <a href="<%= request.getContextPath() %>/relatorios.jsp" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Relatórios</a>
              <a href="<%= request.getContextPath() %>/perfil.jsp" class="nav-item nav-link"><i class="fas fa-user me-2"></i>Perfil</a>
          </div>
      </nav>
