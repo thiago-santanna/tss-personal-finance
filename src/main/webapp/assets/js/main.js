@@ -71,12 +71,12 @@
         data: {
             labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022"],
             datasets: [{
-                    label: "CRE",
+                    label: "REC",
                     data: [15, 30, 55, 65, 60, 80, 95],
                     backgroundColor: "rgba(235, 22, 22, .7)"
                 },
                 {
-                    label: "DEB",
+                    label: "DES",
                     data: [8, 35, 40, 60, 70, 55, 75],
                     backgroundColor: "rgba(235, 22, 22, .5)"
                 },
@@ -100,13 +100,13 @@
         data: {
             labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022"],
             datasets: [{
-                    label: "Crédito",
+                    label: "Receita",
                     data: [15, 30, 55, 45, 70, 65, 85],
                     backgroundColor: "rgba(235, 22, 22, .7)",
                     fill: true
                 },
                 {
-                    label: "Débito",
+                    label: "Despesa",
                     data: [99, 135, 170, 130, 190, 180, 270],
                     backgroundColor: "rgba(235, 22, 22, .5)",
                     fill: true

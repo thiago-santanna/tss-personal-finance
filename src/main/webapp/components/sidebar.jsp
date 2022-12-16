@@ -22,7 +22,8 @@
              <a href="#" class="nav-item nav-link"><i class="fas fa-file-alt me-2"></i>Categorias</a>
              <a href="#" class="nav-item nav-link"><i class="fas fa-hand-holding-usd me-2"></i>Receitas</a>
              <a href="#" class="nav-item nav-link"><i class="fas fa-credit-card me-2"></i>Despesas</a>
-             <a href="#" class="nav-item nav-link"><i class="fa fa-chart-bar me-2 me-2"></i>Relatórios</a>
+             <a href="#" class="nav-item nav-link"><i class="fas fa-comment-dollar me-2"></i>Lançamentos</a>
+             <a href="#" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Relatórios</a>
              <a href="<%= request.getContextPath() %>/perfil.jsp" class="nav-item nav-link"><i class="fas fa-user me-2"></i>Perfil</a>
          </div>
      </nav>
