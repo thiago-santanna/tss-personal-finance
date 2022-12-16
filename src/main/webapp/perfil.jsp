@@ -11,7 +11,6 @@
      <div class="row g-4 d-flex justify-content-center">
        <div class="col-sm-12 col-xl-6">
          <div class="bg-secondary rounded h-100 p-4">
-           <h5 class="mb-4">Perfil</h5>
            <form>
              <div class="mb-3 col-xl-2">
                  <label for="id" class="form-label">ID</label>
@@ -22,6 +21,10 @@
 	                 name="id" 
 	                 aria-describedby="idHelp"
                  >
+             </div>
+             <div class="mb-3 form-check">
+                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                 <label class="form-check-label" for="exampleCheck1">Ativo?</label>
              </div>
              <div class="mb-3">
                   <div class="input-group-prepend">
@@ -68,10 +71,6 @@
 	                 aria-describedby="passwordHelp"
                  >
              </div>              
-             <div class="mb-3 form-check">
-                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                 <label class="form-check-label" for="exampleCheck1">Ativo?</label>
-             </div>
              <button type="submit" class="btn btn-primary">Salvar</button>
            </form>
          </div>
