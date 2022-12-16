@@ -31,7 +31,7 @@
 				         <div class="col-sm-12 col-xl-6">				         
 						    <form>
 						     <div class="d-flex flex-row justify-content-between align-items-center">
-                                 <div class="mb-2">
+                                 <div class="">
 	                                   <div class="col-3">				             	
 							                 <label for="id" class="form-label">ID</label>
 							                 <input 
@@ -47,7 +47,7 @@
 							                 <label class="form-check-label" for="exampleCheck1">Ativo</label>
 							             </div>
 					             </div>
-					             <div class="mb-2">
+					             <div class="">
 					                  <div class="input-group-prepend">
 					                    <c:if test="${user.fotouser != '' && user.fotouser != null}">
 					                       <a href="<%= request.getContextPath()%>/UsuarioController?acao=downloadFoto&id=${user.id}">
